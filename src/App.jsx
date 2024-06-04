@@ -1,13 +1,15 @@
-import 'index.css';
-import Hotel from './components/page/Hotel'
+import './index.css';
+import Accueil from './components/page/Accueil'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import NavigationBar from './components/layout/NavigationBar';
+import Footer from './components/layout/Footer';
 
 function App() {
   return (
     <Router>
-      <Nav />
+      <NavigationBar />
       <Routes>
-        <Route path="/" element={<Hotel />} />
+        <Route path="/" element={<Accueil />} />
       </Routes>
       <Footer />
     </Router>
