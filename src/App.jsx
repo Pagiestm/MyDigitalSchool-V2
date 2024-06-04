@@ -1,9 +1,9 @@
 import './index.css';
-import Accueil from './components/page/Accueil'
-import Locaux from './components/page/Locaux'
-import Ecole from './components/page/Ecole'
-import Formation from './components/page/Formation'
-import Equipe from './components/page/Equipe'
+import Accueil from './components/pages/Accueil'
+import Locaux from './components/pages/Locaux'
+import Ecole from './components/pages/Ecole'
+import Formation from './components/pages/Formation'
+import Equipe from './components/pages/Equipe'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavigationBar from './components/layout/NavigationBar';
 import Footer from './components/layout/Footer';
