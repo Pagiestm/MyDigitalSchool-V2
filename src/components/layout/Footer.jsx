@@ -6,7 +6,7 @@ import IconLinkedin from "../../assets/icons/icon_linkedin.svg";
 
 export default function Footer() {
     return (
-        <footer className="bg-gray-100 flex flex-col items-center justify-center px-4 py-3">
+        <footer className="bg-gray-100 flex flex-col items-center justify-center px-4 py-3 mt-6">
             <div className="border-b border-b-gray-300 w-1/2 flex items-center justify-center">
                 <img src={LogoMDS}
                      alt="Logo MyDigitalSchool"
