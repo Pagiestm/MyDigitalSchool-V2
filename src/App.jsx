@@ -1,16 +1,17 @@
-import {useState} from "react";
-import "./App.css";
+import 'index.css';
+import Hotel from './components/page/Hotel'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
-    const [count, setCount] = useState(0);
-
-    return (
-        <>
-            <h1 className="text-3xl font-bold text-red-800 underline">
-                Hello world!
-            </h1>
-        </>
-    );
+  return (
+    <Router>
+      <Nav />
+      <Routes>
+        <Route path="/" element={<Hotel />} />
+      </Routes>
+      <Footer />
+    </Router>
+  )
 }
 
-export default App; 
+export default App;
