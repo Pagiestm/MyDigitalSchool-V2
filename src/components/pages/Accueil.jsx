@@ -31,8 +31,8 @@ export default function Accueil() {
                                       text="Labels et accréditations"/>
                         </div>
                         <div className="w-full rounded-lg mt-0 lg:mt-auto lg:mb-auto lg:ml-10 order-1 lg:order-last lg:mt-8 lg:mb-8">
-                            <img className="object-cover object-center w-full h-full"
-                                 src="https://dummyimage.com/600x300"
+                            <img className="object-cover object-center w-full h-full lg:rounded-md"
+                                 src="https://www.lilletourism.com/app/uploads/lille-tourisme/2023/09/thumbs/Grand-Place-Lille-Tourisme-23-min-1920x960-crop-1695644063.jpg"
                                  alt="stats"/>
                         </div>
                     </div>
