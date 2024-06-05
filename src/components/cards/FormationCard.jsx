@@ -1,9 +1,9 @@
 export default function FormationCard({title, description, icon, href}) {
     return (
-        <div className="p-4 lg:w-1/2 md:w-full">
+        <div className="lg:w-1/2 md:w-full mb-6">
             <div className="flex rounded-lg border-gray-200 border-opacity-50 sm:flex-row flex-row">
                 <div className="w-12 h-12 md:w-16 md:h-16 mr-4 md:mr-8 sm:mb-0 mb-4 inline-flex items-center justify-center rounded-full bg-black text-indigo-500 flex-shrink-0">
-                    <img src={icon}/>
+                    <img className="w-8 lg:w-11" src={icon}/>
                 </div>
                 <div className="flex-grow">
                     <h2 className="text-gray-900 text-lg font-semibold font-sora mb-2">{title}</h2>

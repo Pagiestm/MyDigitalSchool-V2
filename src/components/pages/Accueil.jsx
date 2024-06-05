@@ -10,9 +10,9 @@ import MarketingIcon from "../../assets/icons/digital-icon.svg";
 export default function Accueil() {
     return (
         <>
-            <main className="mt-20">
+            <main className="mt-20 lg:px-24">
                 <section className="text-gray-600 body-font">
-                    <div className="mx-auto lg:px-8 lg:px-20 flex flex-wrap lg:flex-nowrap">
+                    <div className="mx-auto flex flex-wrap lg:flex-nowrap">
                         <div className="flex flex-wrap mt-auto mb-auto w-full content-start order-2 lg:order-first lg:mb-8">
                             <div className="w-full p-4 px-4 mb-6">
                                 <h1 className="text-2xl font-bold font-sora mb-2 mt-4 text-blue-aqua">Bienvenue à
@@ -36,7 +36,7 @@ export default function Accueil() {
                             <StatCard number="22"
                                       text="Labels et accréditations"/>
                         </div>
-                        <div className="w-full rounded-lg mt-0 lg:mt-auto lg:mb-auto lg:ml-10 order-1 lg:order-last lg:mt-8 lg:mb-8">
+                        <div className="w-full rounded-lg mt-0 lg:ml-10 order-1 lg:order-last lg:mt-8 lg:mb-8">
                             <img className="object-cover object-center w-full h-full lg:rounded-md"
                                  src="https://www.lilletourism.com/app/uploads/lille-tourisme/2023/09/thumbs/Grand-Place-Lille-Tourisme-23-min-1920x960-crop-1695644063.jpg"
                                  alt="stats"/>
@@ -47,7 +47,7 @@ export default function Accueil() {
                 <section className="text-gray-600 body-font">
                     <h1 className="text-2xl font-bold font-sora mt-8 mb-14 text-blue-aqua text-center">Formations</h1>
                     <div className="container px-5 mx-auto flex flex-wrap">
-                        <div className="flex flex-wrap -m-4 mb-8">
+                        <div className="flex flex-wrap mb-8">
                             <FormationCard title="Bachelor web design"
                                            description="Le Bachelor développeur web MyDigitalSchool permet un début de spécialisation dans les métiers du développement web. Après deux premières années de socle commun, les étudiants abordent de manière..."
                                            icon={DevelopmentIcon}
