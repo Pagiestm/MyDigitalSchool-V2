@@ -15,7 +15,7 @@ export default function NavigationLink({children, href, onClick, changeOverlay})
                 :
                 <NavLink to={href}
                          onClick={onClick}
-                         className="w-full flex items-center justify-between">
+                         className="flex items-center justify-between w-max">
                     {children}
                 </NavLink>
             }

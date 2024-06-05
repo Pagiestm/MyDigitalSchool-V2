@@ -1,6 +1,12 @@
 import FormationCard from "../cards/FormationCard.jsx";
 import StatCard from "../cards/StatCard.jsx";
 
+import DevelopmentIcon from "../../assets/icons/development-icon.svg";
+import DesignIcon from "../../assets/icons/design-icon.svg";
+import DigitalIcon from "../../assets/icons/marketing-icon.svg";
+import MarketingIcon from "../../assets/icons/digital-icon.svg";
+
+
 export default function Accueil() {
     return (
         <>
@@ -41,15 +47,23 @@ export default function Accueil() {
                 <section className="text-gray-600 body-font">
                     <h1 className="text-2xl font-bold font-sora mt-8 mb-14 text-blue-aqua text-center">Formations</h1>
                     <div className="container px-5 mx-auto flex flex-wrap">
-                        <div className="flex flex-wrap -m-4">
+                        <div className="flex flex-wrap -m-4 mb-8">
                             <FormationCard title="Bachelor web design"
-                                           description="Le Bachelor développeur web MyDigitalSchool permet un début de spécialisation dans les métiers du développement web. Après deux premières années de socle commun, les étudiants abordent de manière..."/>
+                                           description="Le Bachelor développeur web MyDigitalSchool permet un début de spécialisation dans les métiers du développement web. Après deux premières années de socle commun, les étudiants abordent de manière..."
+                                           icon={DevelopmentIcon}
+                                           href="development"/>
                             <FormationCard title="Bachelor web design"
-                                           description="Le Bachelor développeur web MyDigitalSchool permet un début de spécialisation dans les métiers du développement web. Après deux premières années de socle commun, les étudiants abordent de manière..."/>
+                                           description="Le Bachelor développeur web MyDigitalSchool permet un début de spécialisation dans les métiers du développement web. Après deux premières années de socle commun, les étudiants abordent de manière..."
+                                           icon={DesignIcon}
+                                           href="design"/>
                             <FormationCard title="Bachelor webmarketing"
-                                           description="Le Bachelor développeur web MyDigitalSchool permet un début de spécialisation dans les métiers du développement web. Après deux premières années de socle commun, les étudiants abordent de manière..."/>
+                                           description="Le Bachelor développeur web MyDigitalSchool permet un début de spécialisation dans les métiers du développement web. Après deux premières années de socle commun, les étudiants abordent de manière..."
+                                           icon={DigitalIcon}
+                                           href="marketing"/>
                             <FormationCard title="Bachelor digital"
-                                           description="Le Bachelor développeur web MyDigitalSchool permet un début de spécialisation dans les métiers du développement web. Après deux premières années de socle commun, les étudiants abordent de manière..."/>
+                                           description="Le Bachelor développeur web MyDigitalSchool permet un début de spécialisation dans les métiers du développement web. Après deux premières années de socle commun, les étudiants abordent de manière..."
+                                           icon={MarketingIcon}
+                                           href="digital"/>
                         </div>
                     </div>
                 </section>
