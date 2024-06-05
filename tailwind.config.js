@@ -11,6 +11,7 @@ export default {
                 "Cyan": "#29A5B0",
                 "black": "#181818",
                 "laser-lemon": "#FFBD1D",
+                "black-light": "#555555",
             },
             fontFamily: {
                 "sans": ["Roboto", "Arial", "sans-serif"],
