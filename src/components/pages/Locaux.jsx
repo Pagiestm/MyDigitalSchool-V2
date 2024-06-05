@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 export default function Locaux() {
   const [searchParams, setSearchParams] = useSearchParams();
   const [activeNav, setActiveNav] = useState();
-console.log(activeNav)
 
   useEffect(() => {
     setActiveNav(searchParams.get("id"));
@@ -66,7 +65,7 @@ console.log(activeNav)
                   )
                 })}
               </div>
-              <img className="xl:w-1/4 lg:w-1/3 md:w-1/2 w-full block mx-auto mb-10 object-cover object-center rounded aspect-video" alt="hero" src={`/src/assets/campus/campus${activeNav}.jpg`}/>
+              <img className="md:w-2/3 lg:w-1/2 w-full block mx-auto mb-10 object-cover object-center rounded aspect-video" alt="hero" src={`/src/assets/campus/campus${activeNav}.jpg`}/>
               <div className="flex flex-col text-center w-full">
                 <h1 className="text-3xl title-font mb-4 font-semibold text-blue-aqua font-sora">Campus {activeNav}</h1>
                   {paragraph()}
