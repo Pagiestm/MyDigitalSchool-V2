@@ -79,7 +79,7 @@ export default function NavigationBar() {
 
     return (
         <>
-            <header className="flex justify-between items-center px-6 py-2 border-b border-b-gray-300">
+            <header className="flex justify-between items-center px-6 py-2 border-b border-b-gray-300 fixed w-full bg-white top-0">
                 <NavLink to="/"
                          onClick={() => setIsOpen(false)}>
                     <img src={LogoMDS}
@@ -94,47 +94,47 @@ export default function NavigationBar() {
                          className="w-6"
                          onClick={setOpenModel}/>
                 </button>
+                {isOpen &&
+                    <div className="absolute top-full left-0 lg:left-full lg:-translate-x-full bg-white w-full lg:w-fit min-h-svh lg:min-h-fit lg:p-3 lg:border border-gray-200 lg:rounded-3xl">
+                        {changeOverlayState === "default" &&
+                            <ul className="font-sora">
+                                {objLinkDefault.map((object, index) =>
+                                    <li key={index}>
+                                        <NavigationLink href={object.link}
+                                                        onClick={setOpenModel}
+                                                        changeOverlay={changeOverlay}>
+                                            {object.name}
+                                        </NavigationLink>
+                                    </li>)}
+                            </ul>
+                        }
+                        {changeOverlayState === "campus" &&
+                            <ul className="font-sora">
+                                {objLinkCampus.map((object, index) =>
+                                    <li key={index}>
+                                        <NavigationLink href={object.link}
+                                                        onClick={setOpenModel}
+                                                        changeOverlay={changeOverlay}>
+                                            {object.name}
+                                        </NavigationLink>
+                                    </li>)}
+                            </ul>
+                        }
+                        {changeOverlayState === "formations" &&
+                            <ul className="font-sora">
+                                {objLinkFormations.map((object, index) =>
+                                    <li key={index}>
+                                        <NavigationLink href={object.link}
+                                                        onClick={setOpenModel}
+                                                        changeOverlay={changeOverlay}>
+                                            {object.name}
+                                        </NavigationLink>
+                                    </li>)}
+                            </ul>
+                        }
+                    </div>
+                }
             </header>
-            {isOpen &&
-                <div className="absolute top-100 left-0 bg-white w-full min-h-svh">
-                    {changeOverlayState === "default" &&
-                        <ul className="font-sora">
-                            {objLinkDefault.map((object, index) =>
-                                <li key={index}>
-                                    <NavigationLink href={object.link}
-                                                    onClick={setOpenModel}
-                                                    changeOverlay={changeOverlay}>
-                                        {object.name}
-                                    </NavigationLink>
-                                </li>)}
-                        </ul>
-                    }
-                    {changeOverlayState === "campus" &&
-                        <ul className="font-sora">
-                            {objLinkCampus.map((object, index) =>
-                                <li key={index}>
-                                    <NavigationLink href={object.link}
-                                                    onClick={setOpenModel}
-                                                    changeOverlay={changeOverlay}>
-                                        {object.name}
-                                    </NavigationLink>
-                                </li>)}
-                        </ul>
-                    }
-                    {changeOverlayState === "formations" &&
-                        <ul className="font-sora">
-                            {objLinkFormations.map((object, index) =>
-                                <li key={index}>
-                                    <NavigationLink href={object.link}
-                                                    onClick={setOpenModel}
-                                                    changeOverlay={changeOverlay}>
-                                        {object.name}
-                                    </NavigationLink>
-                                </li>)}
-                        </ul>
-                    }
-                </div>
-            }
         </>
     );
 }
