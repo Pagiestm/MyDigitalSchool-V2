@@ -21,7 +21,7 @@ function App() {
                        element={<Equipe/>}/>
                 <Route path="/locaux"
                        element={<Locaux/>}/>
-                <Route path="/formation"
+                <Route path="/formations"
                        element={<Formation/>}/>
             </Routes>
             <Footer/>
