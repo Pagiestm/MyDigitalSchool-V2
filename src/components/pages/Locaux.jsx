@@ -52,11 +52,10 @@ export default function Locaux() {
   }
 
     return (
-        <>
-          <h1>Locaux</h1>
+        <main className="md:px-44 my-4">
           <section className="text-gray-600 body-font">
-            <div className="container px-5 py-24 mx-auto flex flex-wrap flex-col">
-              <div className="flex mx-auto flex-wrap mb-20">
+            <div className="container px-5 py-8 mx-auto flex flex-wrap flex-col">
+              <div className="flex mx-auto flex-wrap mb-10">
                 {[1,2,3,4].map((e) => {
                   return(
                     <Link key={e} to={`?id=${e}`} className={`sm:px-6 py-3 w-1/2 sm:w-auto justify-center sm:justify-start border-b-2 title-font font-medium inline-flex items-center leading-none tracking-wider ${e == activeNav ? "border-blue-aqua text-blue-aqua rounded-t bg-gray-100" : "border-gray-200 hover:text-gray-900 "}`}>
@@ -72,6 +71,6 @@ export default function Locaux() {
               </div>
             </div>
           </section>
-        </>
+        </main>
     );
 }

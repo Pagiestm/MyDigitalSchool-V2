@@ -1,7 +1,7 @@
 import LogoMDS from "../../assets/logos/mydigitalschool.png";
 import HamburgerIcon from "../../assets/icons/hamburger-icon.svg";
 import CancelIcon from "../../assets/icons/cancel-icon.svg";
-import {useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {NavLink} from "react-router-dom";
 import NavigationLink from "../links/NavigationLink.jsx";
 
@@ -77,9 +77,27 @@ export default function NavigationBar() {
         setIsOpen(!isOpen);
     }
 
+    const headerRef = useRef(null);
+
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (headerRef.current && !headerRef.current.contains(event.target)) {
+                setIsOpen(false);
+            }
+        }
+
+        // Attacher le gestionnaire d'événements de clic au document
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            // Supprimer le gestionnaire d'événements de clic lors du nettoyage
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [headerRef]);
+
     return (
         <>
-            <header className="flex justify-between items-center px-6 py-2 border-b border-b-gray-300 fixed w-full bg-white top-0 z-10">
+            <div className={`${isOpen ? "fixed" : "hidden"} bg-black w-screen h-screen opacity-40 z-10`}></div>
+            <header ref={headerRef} className="z-20 flex justify-between items-center px-6 py-2 border-b border-b-gray-300 sticky w-full bg-white top-0">
                 <NavLink to="/"
                          onClick={() => setIsOpen(false)}>
                     <img src={LogoMDS}
@@ -95,7 +113,7 @@ export default function NavigationBar() {
                          onClick={setOpenModel}/>
                 </button>
                 {isOpen &&
-                    <div className="absolute top-full left-0 lg:left-[calc(100%-24px)] lg:-translate-x-full bg-white w-full lg:w-fit min-h-svh lg:min-h-fit lg:p-3 lg:border border-gray-200 lg:rounded-3xl">
+                    <div className="absolute top-full left-0 lg:left-[calc(100%-6px)] lg:-translate-x-full bg-white w-full lg:w-fit min-h-svh lg:min-h-fit lg:p-3 lg:border border-gray-200 lg:rounded-3xl">
                         {changeOverlayState === "default" &&
                             <ul className="font-sora">
                                 {objLinkDefault.map((object, index) =>

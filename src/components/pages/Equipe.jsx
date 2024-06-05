@@ -74,7 +74,7 @@ export default function Equipe() {
   ];
 
   return (
-    <main className="mt-24 md:px-44">
+    <main className="md:px-44 my-4">
       <div className="flex flex-col items-center">
         <h1 className="text-2xl md:text-3xl font-bold font-sora mb-4 px-5 text-blue-aqua text-center">
           Présentation de <br/> l’équipe pédagogique

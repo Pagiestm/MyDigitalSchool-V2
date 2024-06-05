@@ -11,7 +11,7 @@ export default function Formation() {
 
     return (
         <>
-            <main className="mt-20 w-full flex flex-col items-center justify-center">
+            <main className="w-full flex flex-col items-center justify-center my-4">
                 {id === "development" && <DevelopmentContent/>}
                 {id === "design" && <DesignContent/>}
                 {id === "digital" && <DigitalContent/>}

@@ -10,7 +10,7 @@ import MarketingIcon from "../../assets/icons/digital-icon.svg";
 export default function Accueil() {
     return (
         <>
-            <main className="mt-20 lg:px-24">
+            <main className="my-4 lg:px-24">
                 <section className="text-gray-600 body-font">
                     <div className="mx-auto flex flex-wrap lg:flex-nowrap">
                         <div className="flex flex-wrap mt-auto mb-auto w-full content-start order-2 lg:order-first lg:mb-8">

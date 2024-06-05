@@ -1,6 +1,6 @@
 export default function Ecole() {
   return (
-      <main className="mt-24 md:px-44">
+      <main className="md:px-44 my-4">
         <h1 className="text-xl xl:text-2xl px-5 font-bold font-sora mb-4 text-blue-aqua text-center">MyDigitalSchool, <br/> l’école du multimédia</h1>
         <div className="w-full rounded-lg flex justify-center">
           <img className="object-cover object-center w-full h-full lg:w-1/2 lg:h-1/2 md:rounded-md"

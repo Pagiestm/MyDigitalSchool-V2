@@ -10,22 +10,24 @@ import Footer from "./components/layout/Footer";
 
 function App() {
     return (
-        <Router>
-            <NavigationBar/>
-            <Routes>
-                <Route path="/"
-                       element={<Accueil/>}/>
-                <Route path="/ecole"
-                       element={<Ecole/>}/>
-                <Route path="/equipe"
-                       element={<Equipe/>}/>
-                <Route path="/locaux"
-                       element={<Locaux/>}/>
-                <Route path="/formations"
-                       element={<Formation/>}/>
-            </Routes>
-            <Footer/>
-        </Router>
+       <>
+              <Router>
+                     <NavigationBar/>
+                            <Routes>
+                                   <Route path="/"
+                                          element={<Accueil/>}/>
+                                   <Route path="/ecole"
+                                          element={<Ecole/>}/>
+                                   <Route path="/equipe"
+                                          element={<Equipe/>}/>
+                                   <Route path="/locaux"
+                                          element={<Locaux/>}/>
+                                   <Route path="/formations"
+                                          element={<Formation/>}/>
+                            </Routes>
+                     <Footer/>
+              </Router>
+       </>
     );
 }
 
