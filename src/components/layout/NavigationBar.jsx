@@ -8,6 +8,7 @@ import NavigationLink from "../links/NavigationLink.jsx";
 export default function NavigationBar() {
     const [isOpen, setIsOpen] = useState(false);
     const [changeOverlayState, setChangeOverlayState] = useState("default"); // default, campus, formations
+
     const objLinkDefault = [
         {
             name: "Accueil",
@@ -79,6 +80,10 @@ export default function NavigationBar() {
 
     const headerRef = useRef(null);
 
+    window.addEventListener("scroll", () => {
+        window.scrollY !== 0 ? headerRef.current.classList.add("shadow-xl") : headerRef.current.classList.remove("shadow-xl");
+    });
+
     useEffect(() => {
         function handleClickOutside(event) {
             if (headerRef.current && !headerRef.current.contains(event.target)) {
@@ -97,7 +102,8 @@ export default function NavigationBar() {
     return (
         <>
             <div className={`${isOpen ? "fixed" : "hidden"} bg-black w-screen h-screen opacity-40 z-10`}></div>
-            <header ref={headerRef} className="z-20 flex justify-between items-center px-6 py-2 border-b border-b-gray-300 sticky w-full bg-white top-0">
+            <header ref={headerRef}
+                    className="z-20 flex justify-between items-center px-6 py-2 border-b border-b-gray-300 sticky w-full bg-white top-0">
                 <NavLink to="/"
                          onClick={() => setIsOpen(false)}>
                     <img src={LogoMDS}
