@@ -12,7 +12,7 @@ export default function DesignContent() {
                          className="w-full h-[250px] object-cover lg:mt-12"/>
                 </div>
                 <div className="px-4 flex flex-col items-center justify-center">
-                    <div className="w-14 h-14 flex items-center justify-center rounded-full bg-black text-indigo-500 my-4">
+                    <div className="w-14 h-14 flex items-center justify-center rounded-full bg-black text-indigo-500 mb-4 mt-6">
                         <img src={DigitalIcon}/>
                     </div>
                     <FirstHeader color="blue-aqua">

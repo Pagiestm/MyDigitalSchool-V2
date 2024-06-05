@@ -79,7 +79,7 @@ export default function NavigationBar() {
 
     return (
         <>
-            <header className="flex justify-between items-center px-6 py-2 border-b border-b-gray-300 fixed w-full bg-white top-0">
+            <header className="flex justify-between items-center px-6 py-2 border-b border-b-gray-300 fixed w-full bg-white top-0 z-10">
                 <NavLink to="/"
                          onClick={() => setIsOpen(false)}>
                     <img src={LogoMDS}
@@ -95,7 +95,7 @@ export default function NavigationBar() {
                          onClick={setOpenModel}/>
                 </button>
                 {isOpen &&
-                    <div className="absolute top-full left-0 lg:left-full lg:-translate-x-full bg-white w-full lg:w-fit min-h-svh lg:min-h-fit lg:p-3 lg:border border-gray-200 lg:rounded-3xl">
+                    <div className="absolute top-full left-0 lg:left-[calc(100%-24px)] lg:-translate-x-full bg-white w-full lg:w-fit min-h-svh lg:min-h-fit lg:p-3 lg:border border-gray-200 lg:rounded-3xl">
                         {changeOverlayState === "default" &&
                             <ul className="font-sora">
                                 {objLinkDefault.map((object, index) =>

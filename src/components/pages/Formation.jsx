@@ -16,9 +16,9 @@ export default function Formation() {
                 {id === "design" && <DesignContent/>}
                 {id === "digital" && <DigitalContent/>}
                 {id === "marketing" && <MarketingContent/>}
-                <section className="text-gray-600 body-font">
-                    <div className="container px-5 py-24 mx-auto">
-                        <div className="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+                <section className="my-24 px-4 lg:px-36 text-gray-600 body-font">
+                    <div className="mx-auto">
+                        <div className="w-full mx-auto text-center">
                             <svg xmlns="http://www.w3.org/2000/svg"
                                  fill="currentColor"
                                  className="inline-block w-8 h-8 text-gray-400 mb-8"
