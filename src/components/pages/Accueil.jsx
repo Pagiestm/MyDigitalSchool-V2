@@ -48,7 +48,7 @@ export default function Accueil() {
                     <h1 className="text-2xl font-bold font-sora mt-8 mb-14 text-blue-aqua text-center">Formations</h1>
                     <div className="container px-5 mx-auto flex flex-wrap">
                         <div className="flex flex-wrap mb-8">
-                            <FormationCard title="Bachelor web design"
+                            <FormationCard title="Bachelor développeur web"
                                            description="Le Bachelor développeur web MyDigitalSchool permet un début de spécialisation dans les métiers du développement web. Après deux premières années de socle commun, les étudiants abordent de manière..."
                                            icon={DevelopmentIcon}
                                            href="development"/>
